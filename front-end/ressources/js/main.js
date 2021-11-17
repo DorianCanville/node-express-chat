@@ -64,7 +64,12 @@
     socket.emit('newMember', userName)
 
     socket.on('newMemberList', (data) => {
-        memberList.innerHTML = "";
+        try {
+            memberList.innerHTML = "";
+        } catch (error) {
+            
+        }
+        
         data.map(e => {
             addMember(e.pseudo,e.count);
         })
@@ -156,7 +161,12 @@
 
         function addMessage(messageObject){
             nbMessage++;
-            document.getElementById("nbTotalMessage").textContent = "Nombre total de messages : " + nbMessage;
+            try {
+                document.getElementById("nbTotalMessage").textContent = "Nombre total de messages : " + nbMessage;
+
+            } catch (error) {
+                
+            }
             console.log(messageObject);
 
             let li = document.createElement("li");
@@ -176,10 +186,16 @@
 
             div2.appendChild(text2)
             li.appendChild(div2);
-
-            textBarInput.value = "";
-
-            chatArea[0].children[0].appendChild(li);
+            try {
+                textBarInput.value = "";
+            } catch (error) {
+                
+            }
+            try {
+                chatArea[0].children[0].appendChild(li);
+            } catch (error) {
+                
+            }
         }
 
         function addMember(member, count){
@@ -188,10 +204,15 @@
                 console.log(member);
                 let li = document.createElement("li");
                 let text = document.createElement("span");
-                let counttext = count.toString(10);
-                text.textContent = member + "  " + counttext;
+                //let counttext = count.toString(10);
+                text.textContent = member + "  ";
                 li.appendChild(text);
-                memberList.appendChild(li);
+                try {
+                    memberList.appendChild(li);
+                } catch (error) {
+                    
+                }
+                
             }
 
         }
