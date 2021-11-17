@@ -1,3 +1,4 @@
+
 module.exports = function (io) {
 
   io.on('connection', (socket) => {
@@ -9,9 +10,10 @@ module.exports = function (io) {
       console.log(`user ${socket.id} disconnected`);
       io.emit('notification', { type: 'removed_user', data: socket.id });
     });
-
-    socket.on('...', (msg) => {
-
-    });
+    
+    socket.on("NewMessage",(messageObject) => {
+      io.emit("NewMessage",messageObject);
+    })
+    
   })
 }

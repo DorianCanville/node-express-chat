@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="ressources/css/login.css">
+    <script type="text/javascript" src="ressources/js/main.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.min.js"
+		integrity="sha512-N5JbZMETkl+0SZh5l8OA2VxSfF120owfQyy54iAXTJIKuqAn3A9TrNz1ypB55o8aSU5MxaodEgv74wGUvgUynQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Login</title>
+</head>
+<body>
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+          <!-- Tabs Titles -->
+      
+          <!-- Login Form -->
+          <form>
+            <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+            <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
+            <input type="button" class="fadeIn fourth" value="Log In" id="loginButton">
+          </form>
+      
+          <!-- Remind Passowrd -->
+          <div id="formFooter">
+            <a id="registerButton" class="underlineHover" href="#">register</a>
+          </div>
+      
+        </div>
+      </div>
+</body>
+</html>
